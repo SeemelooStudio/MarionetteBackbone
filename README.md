@@ -75,5 +75,4 @@ By default, the test runner is Mocha and Chai.  You can easily change this by
 editting the commented regions of the karma configuration in `Gruntfile.js`.
 
 ## License ##
-Copyright © 2014 Tim Branyen (@tbranyen)  
-Licensed under the MIT license.
+Copyright © 2014 Seemeloo 
