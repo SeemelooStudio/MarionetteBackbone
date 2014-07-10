@@ -1,4 +1,3 @@
-![Boilerplate]
 
 Backbone Marionette Boilerplate
 ====================
@@ -8,19 +7,6 @@ This boilerplate is Updated from Backbone-Bolierplate. With Marionette, it has m
 ## Documentation ##
 
 [Backbone Boilerplate Wiki](https://github.com/backbone-boilerplate/backbone-boilerplate/wiki)
-
-## Getting started ##
-
-The easiest way to get started is to install Git and clone the repository:
-
-``` bash
-# Using Git, fetch only the latest commits.  You won't need the full history
-# for your project.
-git clone --depth 1 https://github.com/backbone-boilerplate/backbone-boilerplate
-
-# Move the repository to your own project name.
-mv backbone-boilerplate my-project
-```
 
 You will need to download and install [Node.js](http://nodejs.org/) if you want
 to use the commands in the following sections.
