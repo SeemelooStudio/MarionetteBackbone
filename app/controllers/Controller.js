@@ -7,6 +7,7 @@
             },
             //gets mapped to in AppRouter's appRoutes
             index: function () {
+                console.log("it works");
                 App.mainRegion.show(new StoreView());
             }
         });

@@ -18,6 +18,11 @@ define(function (require, exports, module) {
         footerRegion: "footer"
     });
 
+    // event aggrategator
+    app.vent.on("openProductCollectionView", function (someData) {
+        alert("Received", someData);
+    });
+
     return app;
 
 });

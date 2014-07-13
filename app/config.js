@@ -1,14 +1,14 @@
 require.config({
-  paths: {
-    "underscore": "../bower_components/lodash/dist/lodash.underscore",
-    "lodash": "../bower_components/lodash/dist/lodash",
-    "template": "../bower_components/lodash-template-loader/loader",
-    "jquery": "../bower_components/jquery/dist/jquery",
-    "backbone": "../bower_components/backbone/backbone",
-    "marionette": "../bower_components/marionette/lib/backbone.marionette",
-    "mustache" : "../bower_components/mustache/mustache",
-    "text" : "../bower_components/text/text"
-  },
+    paths: {
+        "underscore": "../vendor/bower/lodash/dist/lodash.underscore",
+        "lodash": "../vendor/bower/lodash/dist/lodash",
+        "template": "../vendor/bower/lodash-template-loader/loader",
+        "jquery": "../vendor/bower/jquery/dist/jquery",
+        "backbone": "../vendor/bower/backbone/backbone",
+        "marionette": "../vendor/bower/marionette/lib/backbone.marionette",
+        "mustache": "../vendor/bower/mustache/mustache",
+        "text": "../vendor/bower/text/text"
+    },
 
-  deps: ["main"]
+    deps: ["main"]
 });

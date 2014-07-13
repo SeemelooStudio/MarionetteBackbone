@@ -1,6 +1,6 @@
-﻿define(['app', 'backbone', 'marionette', 'mustache', 'jquery', 'text!templates/store.html', 'models/Model'],
+﻿define(['app', 'backbone', 'marionette', 'mustache', 'jquery', 'text!templates/store.html', 'collections/Blocks'],
     function (App, Backbone, Marionette, Mustache, $, template, Model) {
-        return Backbone.Marionette.ItemView.extend({
+        return Backbone.Marionette.CompositeView.extend({
             template: template,
             initialize: function () {
             },

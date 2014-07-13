@@ -1,5 +1,5 @@
 // Kick off the application.
-require(["app", "routers/Router", "controllers/Controller", "backbone", "marionette"], function (App, Router, Controller, Backbone, Marionette) {
+require(["app", "routers/Router", "controllers/Controller"], function (App, Router, Controller) {
     // Define your master router on the application namespace and trigger all
     // navigation from this instance.
     // app.router = new Router();
