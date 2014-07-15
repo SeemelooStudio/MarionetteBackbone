@@ -1,6 +1,7 @@
 require.config({
     paths: {
         "underscore": "../vendor/bower/lodash/dist/lodash.underscore",
+        "almond": "../vendor/bower/almond/almond",
         "lodash": "../vendor/bower/lodash/dist/lodash",
         "template": "../vendor/bower/lodash-template-loader/loader",
         "jquery": "../vendor/bower/jquery/dist/jquery",

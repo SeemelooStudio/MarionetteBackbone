@@ -1,7 +1,7 @@
 ﻿define(['backbone', 'marionette', 'mustache', 'jquery', 'text!templates/block.html'],
     function (Backbone, Marionette, Mustache, $, template) {
         var BlockView = Backbone.Marionette.ItemView.extend({
-            template: template,
+            //template: template,
             tagName: 'li',
             template: '#template-todoItemView',
 

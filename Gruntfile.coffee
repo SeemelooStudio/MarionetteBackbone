@@ -13,7 +13,6 @@ module.exports = ->
   @registerTask "default", [
     "clean"
     "jshint"
-    "karma:run"
     "processhtml"
     "copy"
     "requirejs"
