@@ -16,6 +16,7 @@ module.exports = ->
     "processhtml"
     "copy"
     "requirejs"
+    "less"
     "styles"
     "cssmin"
   ]
