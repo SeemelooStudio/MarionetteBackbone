@@ -4,7 +4,7 @@ module.exports = ->
   # Generate style
   @config "watch",
     less:
-        files:
-            "app/styles/site.css": "app/less/site.less"
+        files: "app/less/*"
+        task: ["less"]
     options:
         "debounceDelay":250
