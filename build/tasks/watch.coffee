@@ -6,5 +6,3 @@ module.exports = ->
     less:
         files: "app/less/*"
         task: ["less"]
-    options:
-        "debounceDelay":250
