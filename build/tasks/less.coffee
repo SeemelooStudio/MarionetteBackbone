@@ -6,3 +6,4 @@ module.exports = ->
     release:
       files:
         "app/styles/site.css": "app/less/site.less"
+      cleancss: true

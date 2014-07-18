@@ -1,101 +1,66 @@
-//
-// Basic print styles
-// --------------------------------------------------
-// Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
-
 @media print {
 
-  * {
-    text-shadow: none !important;
-    color: #000 !important; // Black prints faster: h5bp.com/s
-    background: transparent !important;
-    box-shadow: none !important;
-  }
+	* {
+		text-shadow: none !important;
+		color: #000 !important;
+		background: transparent !important;
+		box-shadow: none !important;
+		font-size: @font-size-print;
+	}
 
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
+	h1 {
+		font-size: @font-size-h1-print;
+	}
+	h2 {
+		font-size: @font-size-h2-print;
+	}
+	h3 {
+		font-size: @font-size-h3-print;
+	}
+	h4 {
+		font-size: @font-size-h4-print;
+	}
+	h5 {
+		font-size: @font-size-h5-print;
+	}
+	h6 {
+		font-size: @font-size-h6-print;
+	}
 
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
 
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
 
-  // Don't show links for images, or javascript/internal links
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: "";
-  }
+	abbr[title]:after
+	{
+		content: " (" attr(title) ")";
+	}
 
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
 
-  thead {
-    display: table-header-group; // h5bp.com/t
-  }
+	pre,
+	blockquote {
+		page-break-inside: avoid;
+	}
 
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
+	blockquote {
+		border: none;
+		font-style: italic;
+	}
 
-  img {
-    max-width: 100% !important;
-  }
+	img {
+		max-width: 100% !important;
+	}
 
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-
-  // Chrome (OSX) fix for https://github.com/twbs/bootstrap/issues/11245
-  // Once fixed, we can just straight up remove this.
-  select {
-    background: #fff !important;
-  }
-
-  // Bootstrap components
-  .navbar {
-    display: none;
-  }
-  .table {
-    td,
-    th {
-      background-color: #fff !important;
-    }
-  }
-  .btn,
-  .dropup > .btn {
-    > .caret {
-      border-top-color: #000 !important;
-    }
-  }
-  .label {
-    border: 1px solid #000;
-  }
-
-  .table {
-    border-collapse: collapse !important;
-  }
-  .table-bordered {
-    th,
-    td {
-      border: 1px solid #ddd !important;
-    }
-  }
-
+	select {
+		background: #fff !important;
+	}
 }

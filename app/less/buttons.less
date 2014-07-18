@@ -1,157 +1,247 @@
-//
-// Buttons
-// --------------------------------------------------
-
-
-// Base styles
-// --------------------------------------------------
-
+/* =Buttons
+-----------------------------------------------------------------------------*/
 .btn {
-  display: inline-block;
-  margin-bottom: 0; // For input.btn
-  font-weight: @btn-font-weight;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
-  white-space: nowrap;
-  .button-size(@padding-base-vertical; @padding-base-horizontal; @font-size-base; @line-height-base; @border-radius-base);
-  .user-select(none);
+	display: inline-block;
+	vertical-align: top;
 
-  &,
-  &:active,
-  &.active {
-    &:focus {
-      .tab-focus();
-    }
-  }
+	font-family: @font-family-controls;
+	font-size: 1em;
+	font-weight: 400;
 
-  &:hover,
-  &:focus {
-    color: @btn-default-color;
-    text-decoration: none;
-  }
+	line-height: @base-line;
 
-  &:active,
-  &.active {
-    outline: 0;
-    background-image: none;
-    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-  }
+    text-align: center;
+	text-decoration: none;
+	color: @color-body;
 
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: not-allowed;
-    pointer-events: none; // Future-proof disabling of clicks
-    .opacity(.65);
-    .box-shadow(none);
-  }
+	margin: 0;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	box-shadow: none;
+	cursor: pointer;
+	background: #eeeded;
+	padding: .3em 1.3em;
+
+	&:hover {
+		color: rgba(0, 0, 0, .5);
+		background: #dbdada;
+	}
+}
+.btn::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+.btn-big {
+	font-size: @font-size-big;
+}
+.btn-small {
+	font-size: @font-size-small;
+}
+.btn-small-super {
+	font-size: @font-size-small-super;
+	vertical-align: baseline;
+}
+
+.btn-outline {
+	background: none;
+	border: 1px solid #ddd;
 }
 
 
-// Alternate buttons
-// --------------------------------------------------
-
-.btn-default {
-  .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+.btn-blue,
+.btn-red,
+.btn-green,
+.btn-black {
+		color: rgba(255, 255, 255, .9);
+	&:hover {
+		color: rgba(255, 255, 255, .6);
+	}
 }
-.btn-primary {
-  .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+.btn-white {
+	background: #fff;
+	&:hover { background: darken(#fff, 5%); }
 }
-// Success appears as green
-.btn-success {
-  .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+.btn-white.btn-outline {
+	background: none;
+	border-color: rgba(255, 255, 255, .85);
+	color: rgba(255, 255, 255, .85);
+	&:hover {
+		color: rgba(0, 0, 0, .9);
+		background: #fff;
+	}
 }
-// Info appears as blue-green
-.btn-info {
-  .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+.btn-blue.btn-outline {
+	background: none;
+	border-color: @color-blue;
+	color: @color-blue;
+	&:hover {
+		color: rgba(255, 255, 255, .9);
+		background: @color-blue;
+	}
 }
-// Warning appears as orange
-.btn-warning {
-  .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+.btn-red.btn-outline {
+	background: none;
+	border-color: @color-red;
+	color: @color-red;
+	&:hover {
+		color: rgba(255, 255, 255, .9);
+		background: @color-red;
+	}
 }
-// Danger and error appear as red
-.btn-danger {
-  .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+.btn-green.btn-outline {
+	background: none;
+	border-color: @color-green;
+	color: @color-green;
+	&:hover {
+		color: rgba(255, 255, 255, .9);
+		background: @color-green;
+	}
 }
-
-
-// Link buttons
-// -------------------------
-
-// Make a button look and behave like a link
-.btn-link {
-  color: @link-color;
-  font-weight: normal;
-  cursor: pointer;
-  border-radius: 0;
-
-  &,
-  &:active,
-  &[disabled],
-  fieldset[disabled] & {
-    background-color: transparent;
-    .box-shadow(none);
-  }
-  &,
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: transparent;
-  }
-  &:hover,
-  &:focus {
-    color: @link-hover-color;
-    text-decoration: underline;
-    background-color: transparent;
-  }
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &:focus {
-      color: @btn-link-disabled-color;
-      text-decoration: none;
-    }
-  }
+.btn-black.btn-outline {
+	background: none;
+	border-color: @color-black;
+	color: @color-black;
+	&:hover {
+		color: rgba(255, 255, 255, .9);
+		background: @color-black;
+	}
 }
 
-
-// Button Sizes
-// --------------------------------------------------
-
-.btn-lg {
-  // line-height: ensure even-numbered height of button next to large input
-  .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @border-radius-large);
+.btn-blue {
+	background: @color-blue;
+	&:hover { background: darken(@color-blue, 10%); }
 }
-.btn-sm {
-  // line-height: ensure proper height of button next to small input
-  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+.btn-red {
+	background: @color-red;
+	&:hover { background: darken(@color-red, 10%); }
 }
-.btn-xs {
-  .button-size(@padding-xs-vertical; @padding-xs-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+.btn-green {
+	background: @color-green;
+	&:hover { background: darken(@color-green, 10%); }
 }
-
-
-// Block button
-// --------------------------------------------------
-
-.btn-block {
-  display: block;
-  width: 100%;
+.btn-yellow {
+	background: @color-yellow;
+	color: #000;
+	&:hover {
+		background: darken(@color-yellow, 17%);
+	}
 }
-
-// Vertically space out multiple block buttons
-.btn-block + .btn-block {
-  margin-top: 5px;
+.btn-black {
+	background: #000;
+	&:hover { background: lighten(#000, 20%); }
 }
 
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
-  }
+.btn-active,
+.btn[disabled],
+.btn-disabled {
+	background: none;
+	background: #dbdada;
+	color: rgba(0, 0, 0, .5);
+	&:hover {
+		color: rgba(0, 0, 0, .5);
+	}
+}
+.btn-active {
+	border-top-color: #aaa;
+	border-right-color: #bbb;
+	border-left-color: #bbb;
+	border-bottom-color: #ccc;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2) inset;
+}
+.btn-outline.btn[disabled],
+.btn-outline.btn-disabled {
+	background: none;
+	box-shadow: none;
+	color: rgba(0, 0, 0, .3);
+	border: 1px solid rgba(0, 0, 0, .1);
+}
+.btn-outline.btn-active {
+	background: none;
+	color: rgba(0, 0, 0, .4);
+	border-top-color: #ccc;
+	border-right-color: #ccc;
+	border-left-color: #ccc;
+	border-bottom-color: #ddd;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .2) inset;
+}
+.btn[disabled],
+.btn-disabled {
+	cursor: default;
+	box-shadow: none;
+}
+
+.btn-blue.btn-active,
+.btn-red.btn-active,
+.btn-green.btn-active,
+.btn-black.btn-active {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .5) inset;
+}
+
+.btn-blue.btn-active,
+.btn-red.btn-active,
+.btn-green.btn-active,
+.btn-black.btn-active,
+.btn-blue.btn-disabled,
+.btn-red.btn-disabled,
+.btn-green.btn-disabled,
+.btn-black.btn-disabled,
+.btn-blue[disabled],
+.btn-red[disabled],
+.btn-green[disabled],
+.btn-black[disabled] {
+	color: rgba(255, 255, 255, .6);
+	&:hover {
+		color: rgba(255, 255, 255, .6);
+	}
+}
+
+.btn-white.btn-active {
+	border-color: #ccc;
+	border-bottom-color: #ddd;
+}
+.btn-blue.btn-active {
+	border-color: darken(@color-blue, 10%);
+}
+.btn-green.btn-active {
+	border-color: darken(@color-green, 10%);
+}
+.btn-red.btn-active {
+	border-color: darken(@color-red, 10%);
+}
+.btn-yellow.btn-active {
+	border-color: darken(@color-yellow, 25%);
+}
+.btn-black.btn-active {
+	border-color: #000;
+}
+
+.btn-white.btn-active,
+.btn-white.btn-disabled,
+.btn-white[disabled] {
+	background: darken(#fff, 5%);
+}
+.btn-blue.btn-active,
+.btn-blue.btn-disabled,
+.btn-blue[disabled] {
+	background: darken(@color-blue, 10%);
+}
+.btn-red.btn-active,
+.btn-red.btn-disabled,
+.btn-red[disabled] {
+	background: darken(@color-red, 10%);
+}
+.btn-green.btn-active,
+.btn-green.btn-disabled,
+.btn-green[disabled] {
+	background: darken(@color-green, 10%);
+}
+.btn-yellow.btn-active,
+.btn-yellow.btn-disabled,
+.btn-yellow[disabled] {
+	background: darken(@color-yellow, 17%);
+}
+.btn-black.btn-active,
+.btn-black.btn-disabled,
+.btn-black[disabled] {
+	background: lighten(#000, 30%);
 }
